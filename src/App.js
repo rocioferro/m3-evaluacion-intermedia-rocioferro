@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import PokeList from './components/PokeList'
 
 const pokemons = [
   {
@@ -88,6 +89,10 @@ const pokemons = [
 class App extends React.Component {
   constructor(props) {
     super(props);
+    this.state={
+      pokemons:pokemons
+    }
+    
   }
 
   render() {
@@ -95,19 +100,9 @@ class App extends React.Component {
       <div className="App">
         <h1 className="title">Mi lista de pokemon
         </h1>
-          <ul className="pokemon_list">{pokemons.map(pokemon=>
-            <li className="pokemon_elements" key={pokemon.id}>
-                <h2 className="pokemon_element-name">{pokemon.name}</h2>
-                <img className="pokemon_element-photo" src={pokemon.url} alt="pokemon-image"/>
-                <div className="pokemon_element-type">
-                   <ul className="pokemon_type-list">{pokemon.types.map(type=>
-                    <li className="pokemon_type-element">{type}
-                    </li>)} 
-                  </ul> 
-                </div>
-            </li>
-            )}
-          </ul>
+          <PokeList 
+            pokemons={this.state.pokemons}
+          />
       </div>
     );
   }
