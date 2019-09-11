@@ -1,0 +1,13 @@
+.pokemon_list {
+  list-style: none;
+  display:grid;
+  grid-template-columns: auto auto auto auto auto 
+}
+
+.pokemon_elements {
+  border: 0.5px solid black;
+  margin: 10px;
+  border-radius: 10px;
+  width: 150px;
+  background-color: rgb(176, 247, 225);
+}
