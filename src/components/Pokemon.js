@@ -8,10 +8,10 @@ class Pokemon extends React.Component {
         <h2 className="pokemon_element-name">{this.props.name}</h2>
         <img className="pokemon_element-photo" src={this.props.url} alt="pokemon"/>
         <div className="pokemon_element-type">
-            {/* <ul className="pokemon_type-list">{pokemon.types.map((type, index)=>
+            <ul className="pokemon_type-list">{this.props.types.map((type, index)=>
               <li className="pokemon_type-element" key={index}>{type}
               </li>)} 
-            </ul>   */}
+            </ul> 
         </div>
       </div>
     );
