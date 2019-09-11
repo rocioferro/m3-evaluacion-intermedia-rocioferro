@@ -1,6 +1,6 @@
 import React from 'react';
 import Pokemon from './Pokemon';
-import './PokeList.scss'
+import './PokeList.scss';
 import PropTypes from 'prop-types';
 
 class PokeList extends React.Component {
@@ -11,6 +11,7 @@ class PokeList extends React.Component {
       <ol className="pokemon_list">{this.props.pokemons.map(pokemon=>
         <li className="pokemon_elements" key={pokemon.id}>
           <Pokemon
+            evolution={pokemon.evolution}
             name={pokemon.name}
             url={pokemon.url}
             types={pokemon.types}
@@ -25,7 +26,7 @@ class PokeList extends React.Component {
 }
 
 PokeList.propTypes = {
-  pokemons: PropTypes.array,
+  pokemons: PropTypes.arrayOf(PropTypes.object).isRequired,
 }
 
 
