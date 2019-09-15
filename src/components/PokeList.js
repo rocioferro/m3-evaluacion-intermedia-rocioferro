@@ -9,11 +9,12 @@ class PokeList extends React.Component {
     return(
       
       <ol className="pokemon_list">{this.props.pokemons.map(pokemon=>
-        <li className="pokemon_elements" key={pokemon.id}>
+        <li className="pokemon_elements" id={pokemon.id} onClick={this.props.clickCard}>
           <Pokemon
             name={pokemon.name}
             url={pokemon.url}
             types={pokemon.types}
+            
             />
         </li>
         )}

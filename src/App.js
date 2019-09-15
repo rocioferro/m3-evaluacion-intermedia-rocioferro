@@ -92,9 +92,14 @@ class App extends React.Component {
     this.state={
       pokemons:pokemons
     }
-    
+    this.getCard=this.getCard.bind(this)
   }
+  getCard(event){
+    const favID = parseInt(event.currentTarget.id);
+    console.log(favID)
+    console.log(pokemons)
 
+  }
   render() {
     return (
       <div className="App">
@@ -102,6 +107,7 @@ class App extends React.Component {
         </h1>
           <PokeList 
             pokemons={this.state.pokemons}
+            clickCard={this.getCard}
           />
       </div>
     );
