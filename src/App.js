@@ -101,10 +101,12 @@ class App extends React.Component {
     console.log(favID)
     
     this.setState(prevState =>{
-      let newFavsArray = [...prevState.favsArray,{favId}]
+      let newFavsArray = [...prevState.favsArray]
+      newFavsArray.push(favID)
       return {
       favsArray:newFavsArray, }
     })
+    console.log(this.state.favsArray)
 
   }
   render() {

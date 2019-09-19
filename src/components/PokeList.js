@@ -4,16 +4,7 @@ import './PokeList.scss'
 import PropTypes from 'prop-types';
 
 class PokeList extends React.Component {
-  // isFav(showID) {
-  //   const {favs} = this.props;
-  //   const result = favs.findIndex(item => item.show.id === showID);
 
-  //   if (result < 0 ) {
-  //     return '';
-  //   } else {
-  //     return 'app__result--fav';
-  //   }
-  // }
   render() {
     const {clickCard} = this.props;
     return(
